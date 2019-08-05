@@ -1,0 +1,18 @@
+﻿@model MovieRental.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<ul>
+	<li>@Model.Name</li>
+	<li>@Model.MembershipType.Name</li>
+	@if(Model.BirthDate!=null)
+	{
+		<li>@Model.BirthDate</li>
+	}
+</ul>
+
+@Html.ActionLink("Back","Index","Customers", new { @class="btn btn-danger"})
+
